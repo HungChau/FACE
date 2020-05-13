@@ -1,0 +1,6 @@
+.idea/
+
+# Ignore data files
+archive/
+__pycache__/
+.ipynb_checkpoints/
