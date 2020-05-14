@@ -58,7 +58,9 @@ python generate_corpus_statistics.py --input_file data/corpus.txt --output_file 
 
 ```train.py```: is to train a keyphrase extractor using Logistic Regression model. You can evaluate the performance of the model with split data or cross validation by specifying the parameters ```--split_data``` or ```--cross_validation```.
 ```
-python predict.py --input_file data/sample/test.texts.txt --output_file output/output.txt --feature_file checkpoint/features.pkl --config_file model/files/config.json --pattern_file model/files/pos_patterns.txt --model_file checkpoint/logreg.model
+python train.py --text_file data/sample/train.texts.txt --label_file data/sample/train.labels.txt --config_file model/files/config.json --pattern_file model/files/pos_patterns.txt --feature_file checkpoint/features.pkl --model_file checkpoint/logreg.model
+python train.py --text_file data/sample/train.texts.txt --label_file data/sample/train.labels.txt --config_file model/files/config.json --pattern_file model/files/pos_patterns.txt --feature_file checkpoint/features.pkl --model_file checkpoint/logreg.model --split_data 0.2
+python train.py --text_file data/sample/train.texts.txt --label_file data/sample/train.labels.txt --config_file model/files/config.json --pattern_file model/files/pos_patterns.txt --feature_file checkpoint/features.pkl --model_file checkpoint/logreg.model --cross_validation 5
 ```
 
 ## Prediction

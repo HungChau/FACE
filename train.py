@@ -66,7 +66,7 @@ if __name__ == "__main__":
     # MODEL EVALUATION
     print('\nEVALUATING MODEL PERFORMANCE')
     if args.split_data != 0.0:
-        print('Split data evaluation: threshold', args.split_data)
+        print('Split data evaluation: test ratio', args.split_data)
         split_data(X_train, y_train, model, args.threshold, args.split_data)
 
     if args.cross_validation != 0:
